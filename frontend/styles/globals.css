@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Pacifico';
+    src: url('/font/pacifico.woff2');
+    font-weight: 400;
+    font-display: swap;
+    font-display: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('/font/roboto.woff2'), url('/font/roboto.woff');
+    font-weight: 400;
+    font-display: swap;
+    font-display: normal;
+}
+
+@layer base {
+    
+    html {
+        @apply text-gray-900 bg-gray-100 dark:bg-gray-900 dark:text-gray-100
+    }
+    body {
+        @apply text-gray-900 bg-gray-100 dark:bg-gray-900 dark:text-gray-100;
+        /*@apply min-h-screen;*/
+    }
+}
+
+@layer components {
+    .icon {
+        @apply h-5 w-5 cursor-pointer
+    }
+    /* Forms */
+    .form {
+        @apply space-y-4 p-5 overflow-hidden rounded-lg shadow-sm
+    }
+    .inputForm {
+        @apply w-full px-3 py-2 text-base text-gray-900 placeholder-gray-400 border rounded-md shadow-sm bg-gray-50 focus:outline-none focus:ring
+    }
+    .formError {
+        @apply text-red-400 text-sm mt-1
+    }
+    .labelForm {
+        @apply block mb-1 text-gray-900
+    }
+    .inputCheckBox {
+        @apply h-4 w-4 mr-2
+    }
+    .labelCheckBox {
+       @apply text-base text-gray-900
+    }
+    .buttonSaveForm {
+        @apply flex px-3 py-2 mt-4 bg-blue-500 uppercase tracking-widest text-white font-semibold rounded 
+    }
+    .buttonCancelForm {
+        @apply flex px-3 py-2 mt-4 bg-orange-300 uppercase tracking-widest text-gray-50 font-semibold rounded 
+    }
+
+    /* Display informations */
+    .displayLabel {
+        @apply text-gray-900 w-1/4 uppercase font-semibold text-sm
+    }
+    .displayValue {
+        @apply px-3 py-2 w-3/4 text-base text-gray-900 rounded-md bg-gray-50 flex justify-center font-bold
+    }
+
+    /* css buttons */
+    .buttonAction {
+        @apply px-2 py-2 font-semibold bg-blue-400 rounded-lg text-gray-50 hover:bg-blue-300
+    }
+    .buttonRetour {
+        @apply px-2 py-2 mb-2 ml-2 text-sm font-semibold text-gray-500 bg-gray-200 rounded-md hover:bg-gray-300 flex
+    }
+    .addButton {
+        @apply flex float-right px-3 py-2 mb-3 font-semibold text-white bg-blue-500 rounded
+    }
+    .rechercheButton {
+        @apply flex px-3 py-2 mb-3 font-semibold text-white bg-green-500 rounded
+    }
+    
+}

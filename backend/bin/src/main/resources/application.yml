@@ -1,0 +1,27 @@
+spring:
+    datasource:
+        username: root
+        password:
+        url: jdbc:mysql://localhost:3306/cred?serverTimezone=${user.timezone}
+    jpa:
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                format_sql: true
+server:
+    servlet:
+        context-path: /api
+    port: 8090
+logging:
+    level:
+        org.hibernate.SQL: DEBUG
+        org.hibernate.SQL.type.descriptor.sql.BasicBinder: TRACE
+
+
+security:
+    authentification:
+        jwt:
+            secret: ZjQ3MzA0YjAwNmJjZDVlODkxYTA0MTU1YjU3Yjg0MDYzZDdiNWVhZGExOWUzYWMxMjNkMGRmYjQ3ZTZhNDEyMzJkOWY1ZWFiMzFkZGZkOTUwNzNkZTNhYzM1NGU0OWEzNGE1ZmFlNjE1OGU0ZTJjM2NkZjA1M2IwNWRmMGMwMzc
+            expiration_time: 864000000
+            sign_up_url: /users
